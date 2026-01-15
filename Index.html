@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tool bazar </title>
+
+<style>
+/* ===== GLOBAL STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #1E1E2F;
+    color: #EAEAEA;
+    min-height: 100vh;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: #2B2D42;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #FFD700;
+}
+
+header h1 {
+    color: #FFD700;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* ===== MAIN GRID ===== */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* ===== TOOL CARD ===== */
+.tool-card {
+    background-color: #3A3D5B;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.tool-card h2 {
+    margin-bottom: 10px;
+    color: #FFD700;
+}
+
+.tool-card p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* ===== BUTTON ===== */
+.tool-card button {
+    background-color: #FFD700;
+    color: #1E1E2F;
+    border: none;
+    padding: 10px 18px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.tool-card button:hover {
+    background-color: #E6C200;
+}
+
+/* ===== HOVER EFFECT ===== */
+.tool-card:hover {
+    background-color: #FFD700;
+    color: #1E1E2F;
+}
+
+.tool-card:hover h2,
+.tool-card:hover p {
+    color: #1E1E2F;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Multi Tool Hub – Tool bazar</h1>
+</header>
+
+<main class="container">
+
+    <div class="tool-card">
+        <h2>🖼 Image Tools (1–25)</h2>
+        <p>Resize, compress, convert, edit, and optimize images for web and documents.</p>
+        <button onclick="redirect('Image Tools')">Open Tools</button>
+    </div>
+
+    <div class="tool-card">
+        <h2>📄 PDF Tools (26–50)</h2>
+        <p>Merge, split, convert, compress, protect, and manage PDF files easily.</p>
+        <button onclick="redirect('PDF Tools')">Open Tools</button>
+    </div>
+
+    <div class="tool-card">
+        <h2>🔤 Text & Writing Tools (51–70)</h2>
+        <p>Analyze, format, clean, convert, and improve your text content instantly.</p>
+        <button onclick="redirect('Text Tools')">Open Tools</button>
+    </div>
+
+    <div class="tool-card">
+        <h2>🔐 Developer Tools (71–95)</h2>
+        <p>Code formatters, encoders, validators, generators, and developer utilities.</p>
+        <button onclick="redirect('Developer Tools')">Open Tools</button>
+    </div>
+
+    <div class="tool-card">
+        <h2>🔢 Calculators & Converters (96–115)</h2>
+        <p>Financial, scientific, and unit conversion calculators for daily use.</p>
+        <button onclick="redirect('Calculators')">Open Tools</button>
+    </div>
+
+    <div class="tool-card">
+        <h2>🌐 SEO & Web Tools (116–135)</h2>
+        <p>SEO analysis, website checks, metadata tools, and performance testing.</p>
+        <button onclick="redirect('SEO Tools')">Open Tools</button>
+    </div>
+
+    <div class="tool-card">
+        <h2>🎨 Utility & Misc Tools (136–150)</h2>
+        <p>QR codes, passwords, timers, generators, and helpful online utilities.</p>
+        <button onclick="redirect('Utility Tools')">Open Tools</button>
+    </div>
+
+    <div class="tool-card">
+        <h2>🚀 All Tools</h2>
+        <p>Access the complete collection of 150+ tools from one powerful platform.</p>
+        <button onclick="redirect('All Tools')">View All</button>
+    </div>
+
+</main>
+
+<script>
+function redirect(toolName) {
+    alert("Redirecting to " + toolName);
+}
+</script>
+
+</body>
+</html>
